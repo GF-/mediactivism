@@ -1,0 +1,329 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Media Activism - Table 4</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+		<meta name=viewport content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8">
+
+		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/checklist.css" type="text/css" media="screen,projection" />
+
+		<!--[if lt IE 9 ]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+		<style>
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Arial, sans-serif;
+			}
+
+			.current-info,
+			.number {
+				display: none;
+			}
+
+			#checklist {
+				height: 100vh;
+			}
+
+			.content {
+				width: 100%;
+				height: calc(100vh - 8rem);
+				overflow: auto;
+				padding: 1.5rem;
+				line-height: 1.5rem;
+			}
+
+				.content h2 {
+					display: none;
+				}
+				.content h3 {
+					margin-bottom: 1rem;
+					display: none;
+				}
+					h3.current {
+						opacity: 1;
+					}
+				.content p {
+					margin-bottom: 1rem;
+				}
+
+
+			section {
+				margin-bottom: 2rem;
+			}
+
+				ul li {
+					height: 3rem;
+					font-weight: bold;
+					line-height: 3rem;
+					text-align: left;
+					list-style-type: none;
+				}
+					ul li a {
+						text-decoration: none;
+						color: #222;
+					}
+						ul li.current a {}
+						ul li.done a {}
+
+			.steps {
+				width: 100%;
+				height: 4rem;
+				overflow: hidden;
+				border-bottom: 1px solid #ccc;
+			}
+
+				ul[role=tablist] {}
+					ul[role=tablist] li {
+						padding: 0 1.5rem;
+						height: 4rem;
+						line-height: 4rem;
+						font-size: 1.125rem;
+						text-align: center;
+					}
+						ul[role=tablist] li a {
+							color: #ccc;
+						}
+						ul[role=tablist] li.current a {
+							color: #222;
+						}
+						ul[role=tablist] li.done a {
+							color: green;
+						}
+
+			.actions {
+				height: 4rem;
+			}
+
+				ul[role=menu] {
+					text-align: center; 
+					border-top: 1px solid #ccc;
+					display: flex;
+				}
+					ul[role=menu] li {
+						
+						text-align: center; 
+						line-height: 4rem;
+						margin: 0 1rem 0 0;
+						width: 6rem;
+					}
+						ul[role=menu] li.disabled {
+							opacity: .5;
+						}
+						ul[role=menu] li a {
+							color: #fafafa;
+							background: #00abc4;
+							border-radius: 4rem;
+							padding: .75rem 1.3rem;
+						}
+
+
+
+			@media (min-width:60.063em) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+				html,
+				body {
+					height: 100%;
+				}
+
+				#checklist {
+					padding: 3rem;
+				}
+
+				.content {
+					width: calc(100% - 20rem);
+					height: calc(100% - 5rem);
+					display: inline-block;
+					vertical-align: top;
+				}
+					.content h2 {
+						display: block;
+						margin-bottom: 1.5rem;
+					}
+					.content h3.current {
+						visibility: visible;
+						font-size: 1.5rem;
+					}
+
+				.steps {
+					width: 20rem;
+					height: calc(100% - 4rem);
+					display: inline-block;
+					overflow: auto;
+					vertical-align: top;
+					border-bottom: none;
+				}
+
+					ul[role=tablist] {
+						padding: 1rem;
+					}
+						ul[role=tablist] li {
+							padding: 0;
+							height: 3rem;
+							line-height: 3rem;
+							font-size: 1.125rem;
+							text-align: left;
+						}
+							ul[role=tablist] li a {
+								color: #ccc;
+							}
+							ul[role=tablist] li.current a {
+								color: #000;
+								/*border-bottom: 1px solid black;*/
+							}
+/*							ul[role=tablist] li.current a:after {
+								content: '>';
+								display: inline-block;
+								vertical-align: middle;
+								font-size: 1.5rem;
+								line-height: 2rem;
+								color: #00abc4;
+								font-weight: bold;
+								text-decoration: none;
+								padding-left: .5rem;
+							}*/
+							ul[role=tablist] li.done a {
+								color: green;
+							}
+								ul[role=tablist] li.done a:after {
+									content: '✔';
+									display: inline-block;
+									vertical-align: middle;
+									font-size: 1.5rem;
+									line-height: 2rem;
+									color: green;
+									font-weight: bold;
+									text-decoration: none;
+									padding-left: .5rem;
+								}
+
+				.actions {
+					padding-left: 20rem;
+				}
+
+					ul[role=menu] {
+						text-align: left; 
+						border-top: none;
+					}
+						ul[role=menu] li {
+							display: inline-block;
+							text-align: center; 
+							line-height: 5rem;
+							margin: 0 1rem;
+							width: auto;
+						}
+							ul[role=menu] li a {
+								color: #fafafa;
+								background: #00abc4;
+								border-radius: 4rem;
+								padding: .75rem 1.3rem;
+							}
+
+
+			}
+
+		</style>
+
+
+	</head>
+
+	<body lang="en-US">
+
+		<div id="checklist">
+		    <h3>Who is the archive for?</h3>
+		    <!-- <section data-mode="iframe" data-url="/Examples/EmbeddedContent"> -->
+		    <section>
+		    	<h2>Who is the archive for?</h2>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">A journalist</label></p>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">Researchers</label></p>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">Policy Makers</label></p>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">Your govern</label></p>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">Educators</label></p>
+		    	<p><input type="checkbox" id="step_1_1" value="step_1_1"> <label for="step_1_1">Content generators</label></p>
+
+		    </section>
+		    <h3>Second Step</h3>
+		    <section>
+		    	<h2>Second Step</h2>
+		        <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. 
+		            In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum 
+		            dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. 
+		            In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		            Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. 
+		            Donec non pulvinar urna. Aliquam id velit lacus.</p>
+		    </section>
+		    <h3>Third Step</h3>
+		    <section>
+		    	<h2>Third Step</h2>
+		        <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, 
+		            pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. 
+		            Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris 
+		            venenatis.</p>
+		    </section>
+		    <h3>Fourth Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+		    <h3>Another Step</h3>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+
+
+		</div>
+
+	</body>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery.steps.min.js"></script>
+		<script src="js/checklist.js"></script>
+
+</html>
